@@ -5,18 +5,25 @@ const question = [
   'Action that is againist the law',
   'In the open air; Outside a building',
   'Physical activity that keep you fit'
-];
+]
+
 const answer = [
   'crime',
   'outdoor',
   'exercise'
-] 
+]
+
+const qa = [{q:'Action that is againist the law', a:'crime'},
+            {q:'In the open air; Outside a building', a:'outdoor'},
+            {q:'Physical activity that keep you fit', a:'exercise'}
+]
+
 function App() {
   const [input, setInput] = useState('');
   const [score, setScore] = useState(0);
   const [index, setIndex] = useState(0);
   const checkAnswer = (myanswer) => {
-    if(myanswer == answer[index]){
+    if(myanswer == qa[index].a){
       setScore(score+1);
     }
     setIndex(index+1);
@@ -25,7 +32,7 @@ function App() {
     <div className="App">
       <div>
       <p>Your Score:{score}</p>
-      <p>{question[index]}</p>
+      <p>{qa[index].q}</p>
       <form>
         <label></label>
         <input onChange = {(e) => setInput(e.target.value)}  value ={input}/>
