@@ -17,6 +17,7 @@ const qa = shuffle([{q:'Action that is againist the law', a:'crime'},
             {q:'In the open air; Outside a building', a:'outdoor'},
             {q:'Physical activity that keep you fit', a:'exercise'}
 ])
+
 function shuffle(array) {
   var currentIndex = array.length,  randomIndex;
 
