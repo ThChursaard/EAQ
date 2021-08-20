@@ -4,18 +4,25 @@ import React, { useState } from 'react';
 const question = [
   'Action that is againist the law',
   'In the open air; Outside a building',
-  'Physical activity that keep you fit'
+  'Physical activity that keep you fit',
+  'usual; happening often',
+  'strong and well; not sick'
 ]
 
 const answer = [
   'crime',
   'outdoor',
-  'exercise'
+  'exercise',
+  'common',
+  'healthy'
 ]
 
 const qa = shuffle([{q:'Action that is againist the law', a:'crime'},
             {q:'In the open air; Outside a building', a:'outdoor'},
-            {q:'Physical activity that keep you fit', a:'exercise'}
+            {q:'Physical activity that keep you fit', a:'exercise'},
+            {q:'usual; happening often', a:'common'},
+            {q:'strong and well; not sick', a:'healthy'}
+
 ])
 
 function shuffle(array) {
