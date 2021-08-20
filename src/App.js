@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="App">
       <div>
-      <p>Your Score:{score}</p>
+      <p1>Your Score:{score}</p1>
       <p>{qa[index].q}</p>
       <form>
         <label></label>
