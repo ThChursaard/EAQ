@@ -18,6 +18,7 @@ function App() {
       <div>
       <p1>Your Score:{score}</p1>
       <p>{qa[index].q}</p>
+      <h1>Answer is {qa[index-1] && qa[index-1].a} </h1>
       <form>
         <label></label>
         <input onChange = {(e) => setInput(e.target.value)}  value ={input}/>
