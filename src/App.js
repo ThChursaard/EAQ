@@ -17,6 +17,11 @@ function App() {
   }
   return (
     <div className="App">
+      <form>
+      <label>Enter your name:
+        <input type="text" />
+      </label>
+    </form>
       <SelectQues/>
       <button onClick = {(e) => setReady(true)}>Start</button>
       {ready&& <div>
