@@ -18,7 +18,7 @@ function App() {
     setIndex(index + 1);
   };
   const sendStart = () => {
-    fetch(${ENDPOINT}/start, {
+    fetch(`${ENDPOINT}/start`, {
       method: "GET",
     });
   };
