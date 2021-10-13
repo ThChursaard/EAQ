@@ -12,6 +12,12 @@ function App() {
   const [score, setScore] = useState(0);
   const [index, setIndex] = useState(0);
   const [ready, setReady] = useState(false);
+  const [list, setList] = useState([]);
+  const [indexin, setIndexin ] = useState(0);
+  const [solution,setSolution ] = useState('');
+  const [quest, setQuest] = useState('');
+  const [trueanw, setTrueAnw] = useState('');
+  const [time, setTime] = useState(0);
   const checkAnswer = (myanswer) => {
     if (myanswer == qa[index].a) {
       setScore(score + 1);
@@ -31,6 +37,36 @@ function App() {
       console.log(data);
       setReady(true);
     });
+    /*socket.on("QuestionList",(data) => {
+      console.log("QuestionList");
+      console.log(data);
+      setList(data);
+    });
+    socket.on("IndexInterval",(data) => {
+      console.log("IndexInterval");
+      console.log(data);
+      setIndexin(data);
+    });
+    socket.on("SolutionInterval",(data) => {
+      console.log("SolutionInterval");
+      console.log(data);
+      setSolution(data);
+    });*/
+    socket.on("questionInterval",(data) => {
+      console.log("questionInterval");
+      console.log(data);
+      setQuest(data);
+    });
+    socket.on("TrueAnswerInterval",(data) => {
+      console.log("TrueAnswerInterval");
+      console.log(data);
+      setTrueAnw(data);
+    });
+    socket.on("TimeInterval",(data) => {
+      console.log("TimeInterval");
+      console.log(data);
+      setTime(data);
+    });
   });
   return (
     <div className="App">
@@ -45,7 +81,8 @@ function App() {
       {ready && (
         <div>
           <p1>Your Score:{score}</p1>
-          <p>{qa[index].q}</p>
+          <h1>{time%45}</h1>
+          <h1>{quest}</h1>
           <h1>Answer is {qa[index - 1] && qa[index - 1].a} </h1>
           <form>
             <label></label>
