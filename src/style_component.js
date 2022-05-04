@@ -25,10 +25,6 @@ const StyleBody = styled.div`
   flex-direction: column;
   padding-top: 50px;
 `;
-const StyleYoutubeFrame = styled.div`
-  margin: auto;
-  padding: 20;
-`;
 const StyleTriggerHide = styled.div`
   display: ${(props) => (props.isHide ? "block" : "none")};
   z-index: 1000;
@@ -108,7 +104,6 @@ export {
   Styleh1,
   StyleBG,
   StyleBody,
-  StyleYoutubeFrame,
   StyleTriggerHide,
   Stylemaibok,
   StyleButtonFrame,
