@@ -9,6 +9,7 @@ const ENDPOINT = "http://127.0.0.1:4001";
 
 function App() {
   const [input, setInput] = useState("");
+  const [username, setUsername] = useState("");
   const [score, setScore] = useState(0);
   const [index, setIndex] = useState(0);
   const [ready, setReady] = useState(false);
