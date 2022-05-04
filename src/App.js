@@ -73,7 +73,10 @@ function App() {
       <form>
         <label>
           Enter your name:
-          <input type="text" />
+          <input type="text"
+          name="name"
+          onChange={(e) => setUsername(e.target.value)}
+          value={username} />
         </label>
       </form>
       <SelectQues />
