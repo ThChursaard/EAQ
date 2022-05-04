@@ -81,7 +81,7 @@ function App() {
       {ready && (
         <div>
           <p1>Your Score:{score}</p1>
-          <h1>{time%45}</h1>
+          <h1>Your Time:{time%45}</h1>
           <h1>{quest}</h1>
           <h1>Answer is {qa[index - 1] && qa[index - 1].a} </h1>
           <form>
