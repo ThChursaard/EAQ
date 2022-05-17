@@ -75,6 +75,11 @@ function App() {
       console.log(data);
       setTime(data);
     });
+    socket.on("end",(data) => {
+      console.log("end");
+      console.log(data);
+      setEnd(data);
+    })
   });
   return (
     <div className="App">
