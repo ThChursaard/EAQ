@@ -101,8 +101,7 @@ function App() {
             >
               Enter
             </button>
-          </form>
-          <table>
+            <table>
               <tr>
                 <th>Username</th>
                 <th>Score</th>
@@ -114,6 +113,8 @@ function App() {
                 </tr>
               ))}
             </table>
+          </form>
+          
         </div>
       )}
       {end && <EndCredit />}
