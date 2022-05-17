@@ -11,7 +11,7 @@ const ENDPOINT = "http://127.0.0.1:4001";
 function App() {
   const [input, setInput] = useState("");
   const [username, setUsername] = useState("");
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState([]);
   const [index, setIndex] = useState(0);
   const [ready, setReady] = useState(false);
   const [end, setEnd] = useState(false);
@@ -64,6 +64,11 @@ function App() {
       console.log("TrueAnswerInterval");
       console.log(data);
       setTrueAnw(data);
+    });
+    socket.on("AllScore",(data) => {
+      console.log("AllScore");
+      console.log(data);
+      setScore(data);
     });
     socket.on("TimeInterval",(data) => {
       console.log("TimeInterval");
