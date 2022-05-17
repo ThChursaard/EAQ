@@ -28,6 +28,7 @@ function App() {
     setIndex(index + 1);
   };
   const sendStart = () => {
+    if (username == 'admin')
     fetch(`${ENDPOINT}/start`, {
       method: "GET",
     });
