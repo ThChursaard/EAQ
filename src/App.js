@@ -106,10 +106,10 @@ function App() {
                 <th>Username</th>
                 <th>Score</th>
               </tr>
-              {score.map((a) => (
+              {score.map((c) => (
                 <tr>
-                  <td>{a.username}</td>
-                  <td>{a.score}</td>
+                  <td>{c.username}</td>
+                  <td>{c.score}</td>
                 </tr>
               ))}
             </table>
