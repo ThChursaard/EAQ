@@ -102,6 +102,18 @@ function App() {
               Enter
             </button>
           </form>
+          <table>
+              <tr>
+                <th>Username</th>
+                <th>Score</th>
+              </tr>
+              {allScore.map((c) => (
+                <tr>
+                  <td>{c.username}</td>
+                  <td>{c.score}</td>
+                </tr>
+              ))}
+            </table>
         </div>
       )}
       {end && <EndCredit />}
