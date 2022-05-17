@@ -5,6 +5,7 @@ import { qa } from "./ques.js";
 import SelectQues from "./SelectQues.js";
 import { useEffect } from "react";
 import socketIOClient from "socket.io-client";
+import EndCredit from "./endcredit";
 const ENDPOINT = "http://127.0.0.1:4001";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [index, setIndex] = useState(0);
   const [ready, setReady] = useState(false);
+  const [end, setEnd] = useState(false);
   const [list, setList] = useState([]);
   const [indexin, setIndexin ] = useState(0);
   const [solution,setSolution ] = useState('');
@@ -102,6 +104,7 @@ function App() {
           </form>
         </div>
       )}
+      {end && <EndCredit />}
     </div>
   );
 }
