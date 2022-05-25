@@ -6,7 +6,7 @@ import SelectQues from "./SelectQues.js";
 import { useEffect } from "react";
 import socketIOClient from "socket.io-client";
 import EndCredit from "./endcredit";
-const ENDPOINT = "http://212.80.213.130:4001/";
+const ENDPOINT = "http://127.0.0.1:4001";
 
 function App() {
   const [input, setInput] = useState("");
