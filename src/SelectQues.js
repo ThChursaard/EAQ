@@ -3,7 +3,7 @@ import "./App.css";
 import React, { useState } from "react";
 import { qa } from "./ques.js";
 import { shuffle } from "./ques.js";
-const ENDPOINT = "http://127.0.0.1:4001";
+const ENDPOINT = "http://212.80.213.130:4001/";
 const a = qa.map((c) => c.a);
 function SelectQues() {
   const [questionCount, setQuestionCount] = useState(0);
