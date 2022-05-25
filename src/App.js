@@ -92,7 +92,7 @@ function App() {
           />
         </label>
       </form>
-      <SelectQues />
+      {time > 0 && <SelectQues />}
       <button onClick={(e) => sendStart()}>Start</button>
       {ready && (
         <div>
