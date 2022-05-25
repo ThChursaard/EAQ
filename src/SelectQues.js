@@ -20,9 +20,11 @@ function SelectQues() {
   return (
     <div>
       <div>{questionCount}/10</div>
-      {qa.map((c) => (
-        <button onClick={(e) => sendQuestion(c.q, c.a)}> {c.a} </button>
-      ))}
+      {shuffle(qa)
+        .filter((c, i) => i <= 5)
+        .map((c) => (
+          <button onClick={(e) => sendQuestion(c.q, c.a)}> {c.a} </button>
+        ))}
     </div>
   );
 }
