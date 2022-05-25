@@ -19,7 +19,7 @@ function SelectQues() {
   };
   return (
     <div>
-      <div>{questionCount}/10</div>
+      <div>Vocab Stock:{questionCount}/10</div>
       {shuffle(qa)
         .filter((c, i) => i <= 5)
         .map((c) => (
