@@ -96,7 +96,7 @@ function App() {
       <button onClick={(e) => sendStart()}>Start</button>
       {ready && (
         <div>
-          <p1>Your Score:{myScore}</p1>
+          <h1>Your Score:{myScore}</h1>
           <h1>Your Time:{time % 45}</h1>
           <h1>{quest}</h1>
           {time % 45 > 30 && <h1>The Answer is {trueanw} </h1>}
